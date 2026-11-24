@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        /* Cor de fundo da página inteira e fonte */
+        body {
+            background-color: #d291f2; /* Fundo cinza bem clarinho */
+            
+        }
+
+        /* Caixa do formulário */
+        form {
+            background-color: #c49dd1/* Fundo branco para destacar o formulário */
+            
+        }
+
+        /* Caixas de agrupamento (Dados pessoais, Gênero, Cursos) */
+        fieldset {
+            
+            background-color: #8743cb/* Fundo levemente lilás */
+        }
+
+        /* Títulos das caixas (legend) */
+        legend {
+            
+            background-color: #f0ebf4 /* Fundo roxo */
+        }
+
+        /* Rótulos dos campos */
+        label {
+            
+            color: #000000
+        }
+
+        /* Deixa os labels de rádio e checkbox na mesma linha */
+        input[type="radio"] + label
+        input[type="checkbox"] + label
+        label[for="masculino"], label[for="Femenino"], label[for="ti"], label[for="mecanica-a"] {
+            background-color: #b994dc
+        }
+
+
+        /* Botão Enviar */
+        input[type="submit"] {
+            background-color: #d9b5fb /* Cor do botão */
+            
+            
+            
+        }
+
+        /* Cor quando passa o mouse por cima do botão */
+        input[type="submit"]:hover {
+            background-color: #6a1b9a
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset> 
+            <legend>Cadastrar-se</legend>
+            
+            <label for="primeiro_nome">Nome completo:</label>
+            <input type="text" id="primeiro_nome" name="primeiro_nome" placeholder="Digite seu primeiro nome">
+             
+            <label for="segundo_nome">Nome completo:</label>
+            <input type="text" id="segundo_nome" name="segundo_nome" placeholder="Digite seu segundo nome">
+
+            <label for="Sobrenome">Nome completo:</label>
+            <input type="text" id="Sobrenome" name="Sobrenome" placeholder="Digite seu sobrenome">
+
+            <label for="dt_nacimento">Data de nascimento:</label>
+            <input type="date" id="dt_nacimento" name="dt_nacimento">
+
+            <label for="nikename">Nome de usuario:</label>
+            <input type="text" id="nikename" name="nikename" placeholder="Digite seu nome de usuario">
+             
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu e-mail">
+            
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            
+        </fieldset> 
+
+        <fieldset>
+            <legend>Gênero</legend>
+            <input type="radio" id="masculino" name="genero" value="M">
+            <label for="masculino">Masculino</label>
+
+            <input type="radio" id="feminino" name="genero" value="F">
+            <label for="feminino">Feminino</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cursos</legend>
+            <input type="checkbox" id="ti" name="curso" value="TI">
+            <label for="ti">TI</label>
+
+            <input type="checkbox" id="mecanica-a" name="curso" value="mecanica-a">
+            <label for="mecanica-a">Mecânica aeronáutica</label>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
